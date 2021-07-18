@@ -1,12 +1,12 @@
 from BarrierController import *
 
 #State of the barrier: Up, Hold, or Down
-barrier_state = "down"
+status = "down"
 
-while barrier_state != "stop":
+while status != "stop":
     print("Enter the wanted state of the barrier: ", end = '')
-    barrier_state = input()
-    barrier_control(barrier_state)
+    status = input()
+    BarrierControl(status)
 
 GPIO.cleanup()
 

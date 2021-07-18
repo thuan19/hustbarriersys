@@ -10,20 +10,20 @@ GPIO.setup(15, GPIO.OUT) #Hold
 GPIO.setup(18, GPIO.OUT) #Down
 
 #State of the barrier: Up, Hold, or Down
-def barrier_control(barrier_state = "up"):
-    print("The current state of the barrier:", barrier_state)
+def BarrierControl(status = "up"):
+    print("The current state of the barrier:", status)
 
-    if (barrier_state == "up"):
+    if (status == "up"):
         GPIO.output(14, GPIO.LOW)
         time.sleep(0.5) #pusle = 0.3~0.5s to control the barrier
         GPIO.output(14, GPIO.HIGH)
 
-    if (barrier_state == "hold"):
+    if (status == "hold"):
         GPIO.output(15, GPIO.LOW)
         time.sleep(0.5)
         GPIO.output(15, GPIO.HIGH)
 
-    if (barrier_state == "down"):
+    if (status == "down"):
         GPIO.output(18, GPIO.LOW)
         time.sleep(0.5)
         GPIO.output(18, GPIO.HIGH)
