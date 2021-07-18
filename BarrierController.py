@@ -10,7 +10,7 @@ GPIO.setup(15, GPIO.OUT) #Hold
 GPIO.setup(18, GPIO.OUT) #Down
 
 #State of the barrier: Up, Hold, or Down
-def barrier_controll(barrier_state = "up"):
+def barrier_control(barrier_state = "up"):
     print("The current state of the barrier:", barrier_state)
 
     if (barrier_state == "up"):
